@@ -1,0 +1,7 @@
+asd	37	3	easy
+a2	20	1	hard
+gg	15	2	easy
+asd	13	1	easy
+a4	13	2	easy
+a1	10	1	easy
+a3	9	2	middle

@@ -1,0 +1,39 @@
+body{
+	margin: 0px;
+	background-color:rgb(43,54,61); 
+}
+h1{
+	color:#ffffff;
+	font-family:"微软雅黑";
+	}
+h2{
+	color:#ffffff;
+	font-family:"微软雅黑";
+	}
+label{
+	color: white;
+	font-size: 25pt;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+input{
+	font-size: 18pt;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+#header{
+	margin-top: 40px;
+	margin-bottom: 40px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+}
+
+#main{
+	width: 960px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	margin-left: auto;
+	margin-right: auto;
+}

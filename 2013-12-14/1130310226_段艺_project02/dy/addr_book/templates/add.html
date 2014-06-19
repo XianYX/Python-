@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+	<head>
+		{% load staticfiles %}
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+		<link rel="stylesheet" type="text/css" href="{% static "add.css" %}">
+		<title>添加联系人</title>
+	</head>
+	<body>
+		<h1 align="center">添加联系人</h1>
+		<div align="center">
+		{% if empty %}
+			<ul>
+				{% for string in empty %}
+				<li>{{ string }}</li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+		</div>
+		<h3 align="center"><a href="/show/">浏览联系人</a></h3>
+		<form method="post">
+			{% csrf_token %}
+			<table border = 1 align = "center">
+				<tr>
+					<th>学号</th>
+					<th>姓名</th>
+					<th>性别</th>
+					<th>电话</th>
+					<th>E-mail</th>
+					<th>QQ</th>
+					<th>地址</th>
+					<th>生日（YYYYMMDD）</th>
+				</tr>
+				<tr>
+					<td><input name="student_num" type="text"></td>
+					<td><input name="name" type="text"></td>
+					<td><input name="sex" type="radio" value="M" checked="True"> 男 <input name="sex" type="radio" value="F"> 女 </td>
+					<td><input name="phone" type="text"></td>
+					<td><input name="email" type="email"></td>
+					<td><input name="QQ" type="text"></td>
+					<td><input name="address" type="text"></td>
+					<td><input name="birthday" type="date"></td>
+				</tr>
+				<tr>
+					<td colspan="8" align="center" ><input type="submit" value="提交" class="buttom"><input type="reset" value="重置" class="buttom"></td>
+				</tr>	
+			</table>
+		</form>	
+	</body>
+</html>

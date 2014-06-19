@@ -1,0 +1,8 @@
+Spyder Editor
+python 2.7
+This program is for 
+It's made by Duan Yi.
+Student number:1130310226
+E-mail:yumendy@163.com
+version:1.0
+date:

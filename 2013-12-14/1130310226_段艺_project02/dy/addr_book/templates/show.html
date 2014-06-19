@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		{% load staticfiles %}
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" type="text/css" href="{% static "show.css" %}"> 
+		<title>浏览联系人</title>
+	</head>
+	<body>
+		<div id="header">
+			<p >您好！　<b>{{username}}</b></p>
+			<ul>
+				<li><a href="/setpasswd/">修改密码</a></li>
+				<li><a href="/logout/">退出登陆</a></li>
+			</ul>
+			<div class="clear"></div>
+		</div>
+		<div id="middle">
+			<h1 align="center">浏览联系人</h1>
+			<div id="search">
+				<h3><a href="/add/">添加联系人</a></h3>
+				<form method="post">
+					{% csrf_token %}
+					<p><input type="text" id="Search" name="k"><input type="submit" value="search" class="buttom"></p>
+				</form>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div id="show">
+			<table border="2">
+				<tr>
+					<th>学号</th>
+					<th>姓名</th>
+					<th>性别</th>
+					<th>电话</th>
+					<th>E-mail</th>
+					<th>QQ</th>
+					<th>地址</th>
+					<th>生日（YYYYMMDD）</th>
+					<th>动作</th>
+				</tr>
+				{% for people in people_lst %}
+				<tr>
+					<td align="center">{{people.student_num}}</td>
+					<td align="center">{{people.name}}</td>
+					<td align="center">{% if people.sex %} 男 {% else %} 女 {% endif %}</td>
+					<td align="center">{{people.phone}}</td>
+					<td align="center">{{people.email}}</td>
+					<td align="center">{{people.QQ}}</td>
+					<td align="center">{{people.address}}</td>
+					<td align="center">{{people.birthday}}</td>
+					<td align="center" ><a href="/delete/?id={{people.id}}">删除</a><a href="/change/?id={{people.id}}">修改</a></td>
+				</tr>
+				{% endfor %}
+			</table>
+		</div>		
+	</body>
+</html>

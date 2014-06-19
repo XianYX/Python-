@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+		<title>浏览联系人</title>
+		<style type="text/css">
+			table{
+				margin-top: 4%;
+				border-width: 2px;
+				border-color: rgb(102,217,239);
+				font-family: "楷体";
+				font-size: 20pt;
+			}
+			.buttom{
+				margin-left: 8px;
+				margin-right: 8px;
+				border-width: 2px;
+			}
+			input{
+				border-width: 0px;
+			}
+			th{
+				border-color: rgb(102,217,239);
+			}
+			h1{
+				margin-top: 5%;
+				font-family: "微软雅黑"
+			}
+			a{
+				text-decoration: none;
+				font-family: "微软雅黑"
+				margin-top: 1%;
+				color: black;
+				}
+		</style>
+	</head>
+	<body>
+		<center><h1>浏览联系人</h1></center>
+		<table border="1" align="center">
+			<tr>
+				<th>学号</th>
+				<th>姓名</th>
+				<th>性别</th>
+				<th>电话</th>
+				<th>E-mail</th>
+				<th>QQ</th>
+				<th>地址</th>
+				<th>生日（YYYYMMDD）</th>
+			</tr>
+			{% for people in people_lst %}
+			<tr>
+				<td align="center">{{people.student_num}}</td>
+				<td align="center">{{people.name}}</td>
+				<td align="center">{% if people.sex %} 男 {% else %} 女 {% endif %}</td>
+				<td align="center">{{people.phone}}</td>
+				<td align="center">{{people.email}}</td>
+				<td align="center">{{people.QQ}}</td>
+				<td align="center">{{people.address}}</td>
+				<td align="center">{{people.birthday}}
+			</tr>
+			{% endfor %}
+		</table>
+		<h3><center><a href="/add/">添加联系人</a></center></h3>
+	</body>
+</html>

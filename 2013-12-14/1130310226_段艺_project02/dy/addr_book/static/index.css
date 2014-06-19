@@ -1,0 +1,75 @@
+body{
+	background-color: rgb(43,54,61);
+	margin: 0px;
+	}
+h1{
+	text-shadow:8px 4px 4px #ededed;
+	color:#ffffff;
+	font-size:42px;
+	font-family:"微软雅黑";
+	}
+h2{
+	color: #ffffff;
+	font-size: 25pt;
+	margin: 0px;
+	padding-top:50px; 
+	}
+a{
+	text-decoration: none;
+	color: #ffffff;
+}
+#header{
+	margin: auto;
+	width: 960px;
+	}
+#main{
+	width: 960px;
+	margin: auto;
+	}
+#login{
+	width: 400px;
+	height: 150px;
+	margin-left: 40px;
+	margin-top: 20px;
+	margin-right: 10px;
+	margin-bottom: 20px;
+	box-shadow:5px 5px 5px rgba(0,0,0,.6);
+	background-color:rgb(240,98,48);
+	font-family:"微软雅黑";
+	}
+#register{
+	width: 400px;
+	height: 150px;
+	margin-left: 40px;
+	margin-top: 20px;
+	margin-right: 10px;
+	margin-bottom: 20px;
+	background-color:rgb(51,153,51);
+	box-shadow:5px 5px 5px rgba(0,0,0,.6);
+	font-family:"微软雅黑";
+	}
+#right{
+	margin-bottom: 10px;
+	margin-top: 10px;
+	margin-right: 0px;
+	margin-left: 0px;
+	width: 480px;
+	height: 360px;
+	float: right;
+	}
+#left{
+	margin-bottom: 10px;
+	margin-top: 10px;
+	margin-right: 0px;
+	margin-left: 0px;
+	width: 480px;
+	height: 360px;
+	float: left;
+	}
+#footer{
+	width: 960px;
+	margin: auto;
+	}
+.clean{
+	clear:both;
+	}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{% load staticfiles %}
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+		<link rel="stylesheet" type="text/css" href="{% static "index.css" %}">
+		<title>通讯录</title>
+	</head>
+	<body>
+		<div id="header">
+			<h1 align="center">通　讯　录</h1>
+			<hr size="5" color="#FFFFFF">
+		</div>
+		<div id="main">
+			<div id="left">
+				<img src="{% static "2.png" %}">
+			</div>
+			<div id="right">
+				<div id="login">
+					<h2 align="center"><a href="/login/">登　陆</a></h2>
+				</div>
+				<div id="register">
+					<h2 align="center"><a href="/register/">注　册</a></h2>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

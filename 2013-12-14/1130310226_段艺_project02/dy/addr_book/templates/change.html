@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+	<head>
+		{% load staticfiles %}
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+		<link rel="stylesheet" type="text/css" href="{% static "change.css" %}">
+		<title>修改联系人</title>
+	</head>
+	<body>
+		<center><h1>修改联系人</h1></center>
+		<div align="center">
+		{% if empty %}
+			<ul>
+				{% for string in empty %}
+				<li>{{ string }}</li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+		</div>
+		<h3 align="center"><a href="/show/">浏览联系人</a></h3>
+		<form method="post">
+			{% csrf_token %}
+			<table border = 1 align = "center">
+				<tr>
+					<th>学号</th>
+					<th>姓名</th>
+					<th>性别</th>
+					<th>电话</th>
+					<th>E-mail</th>
+					<th>QQ</th>
+					<th>地址</th>
+					<th>生日（YYYYMMDD）</th>
+				</tr>
+				<tr>
+					<td><input name="student_num" type="text" value="{{ people.student_num }}"></td>
+					<td><input name="name" type="text" value="{{people.name}}"></td>
+					{% if people.sex == True %}
+					<td><input name="sex" type="radio" value="M" checked="True"> 男 <input name="sex" type="radio" value="F"> 女 </td>
+					{% else %}
+					<td><input name="sex" type="radio" value="M"> 男 <input name="sex" type="radio" value="F" checked="True"> 女 </td>
+					{% endif %}
+					<td><input name="phone" type="text" value="{{people.phone}}"></td>
+					<td><input name="email" type="email" value="{{people.email}}"></td>
+					<td><input name="QQ" type="text" value="{{people.QQ}}"></td>
+					<td><input name="address" type="text" value="{{people.address}}"></td>
+					<td><input name="birthday" type="date" value="{{people.birthday}}"></td>
+				</tr>
+				<tr>
+					<td colspan="8" align="center" ><input type="submit" value="提交" class="buttom"><input type="reset" value="重置" class="buttom"></td>
+				</tr>	
+			</table>
+		</form>
+	</body>
+</html>

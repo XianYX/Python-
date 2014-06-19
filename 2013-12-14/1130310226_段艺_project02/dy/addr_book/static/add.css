@@ -1,0 +1,25 @@
+body{
+	margin: 0px;
+	background-color: rgb(43,54,61);
+}
+a{
+	text-decoration: none;
+	color: white;
+}
+h1{
+	margin: 0px;
+	color:#ffffff;
+	font-family:"微软雅黑";
+}
+table{
+	margin: auto;
+	margin-top: 10px;
+	color: white;
+	font-size: 15pt;
+}
+li{
+	color: white;
+}
+ul{
+	list-style: none;
+}

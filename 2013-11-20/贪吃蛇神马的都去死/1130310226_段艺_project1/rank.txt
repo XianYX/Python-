@@ -1,0 +1,5 @@
+asd	50	4	easy
+a2	20	1	hard
+a4	13	2	easy
+d	13	1	easy
+qwe	13	1	easy

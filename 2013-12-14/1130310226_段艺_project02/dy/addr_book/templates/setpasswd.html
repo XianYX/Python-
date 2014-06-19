@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zn-ch">
+	<head>
+	{% load staticfiles %}
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="{% static "setpasswd.css" %}"> 
+		<title>修改密码</title>
+	</head>
+	<body>
+		<div align="center" id="header">
+			<h1 align="center">修改密码</h1>
+			<hr size="5" color="#FFFFFF"align="center">
+		</div>
+		<div align="center" id="main">
+			{% if empty %}
+				<ul>
+					{% for string in empty %}
+					<li>{{ string }}</li>
+					{% endfor %}
+				</ul>
+			{% elif status == 're_error' %}
+				<h2>密码再次输入不一致，请重新设置。</h2>
+			{% elif status == 'passwd_error' %}
+				<h2>原始密码错误，请重新输入。</h2>
+			{% endif %}
+			
+			<form method="post">
+				{% csrf_token %}
+				<label for="passwd">原密码</label>
+				<input name="passwd" type="password" id="passwd" />
+				<br>
+				<label for="newpasswd">新密码</label>
+				<input name="newpasswd" type="password" id="newpasswd" />
+				<br>
+				<label for="repasswd">重复密码</label>
+				<input name="repasswd" type="password" id="repasswd" />
+				<br>
+				<input type="submit" value="确认" />
+				<input type="reset" value="重置" />
+			</form>
+		</div>
+	</body>
+</html>
