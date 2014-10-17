@@ -154,4 +154,3 @@ def setpasswd(req):
 
 def setsuccess(req):
 	return render_to_response('setsuccess.html',{})
-
